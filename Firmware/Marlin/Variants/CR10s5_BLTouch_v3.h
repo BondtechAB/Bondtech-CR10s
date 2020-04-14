@@ -718,9 +718,9 @@
  * The BLTouch probe uses a Hall effect sensor and emulates a servo.
  */
 #define BLTOUCH
-#define SERVO0_PIN 11
 #if ENABLED(BLTOUCH)
   //#define BLTOUCH_DELAY 500   // (ms) Enable and increase if needed
+  //#define BLTOUCH_FORCE_5V_MODE
 #endif
 
 /**
@@ -767,12 +767,12 @@
  *      O-- FRONT --+
  *    (0,0)
  */
-#define X_PROBE_OFFSET_FROM_EXTRUDER 32  // X offset: -left  +right  [of the nozzle]
+#define X_PROBE_OFFSET_FROM_EXTRUDER 36  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER -2  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -2.7   // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -2.3   // Z offset: -below +above  [the nozzle]
 
 // Certain types of probes need to stay away from edges
-#define MIN_PROBE_EDGE 35
+#define MIN_PROBE_EDGE 37
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
